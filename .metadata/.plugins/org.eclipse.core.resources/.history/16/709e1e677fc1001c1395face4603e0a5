@@ -1,0 +1,25 @@
+package com.tts.weatherapp;
+//A controller is a class that handles web requests directly. Here, this
+//class will be responsible for handling our web page's requests.
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WeatherController {
+
+	//this method will handle requests to "/"
+	//RequestMapping will handle any type of web request (GET/PUT/POST/
+	//PATCH/DELETE)
+	//@RequestMapping("/") //we could narrow specificity via (value='/', method=RequestMethod.GET [or RequestMethod.GET, RequestMethod.POST, etc])
+						//OR also via @GetMapping(value="/")
+	@GetMapping(value="/")
+	public String getIndex() {
+		return "foobar";
+	}
+	
+	
+	
+}

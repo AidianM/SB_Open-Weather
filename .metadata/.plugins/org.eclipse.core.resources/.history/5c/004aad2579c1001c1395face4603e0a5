@@ -1,0 +1,15 @@
+package com.tts.weatherapp;
+
+import org.springframework.beans.factory.annotation.Value;
+
+/*What this class will do is to be a utility class that we use to make the
+API call.
+
+It's very common when making Spring Boot apps to create "Service" classes
+that are, essentially, just utility classes.
+*/
+public class WeatherService {
+	
+	@Value("${api_key}")
+	private String apiKey;
+}
